@@ -12,6 +12,6 @@ test('checks that the basic info for an employee is being returned', () => {
     const employee = new Employee('test', 4, 'blank@blank.com');
 
     expect(employee.getBasicInfo()).toHaveProperty('name');
-    expect(employee.getBasicInfo()).toHaveProperty('id');
+    expect(employee.getBasicInfo()).toHaveProperty('employeeId');
     expect(employee.getBasicInfo()).toHaveProperty('email');
 });

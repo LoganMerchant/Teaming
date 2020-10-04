@@ -6,13 +6,12 @@ test('checks that an office number is being returned', () => {
     expect(manager.officeNumber).toEqual(1111);
 });
 
-test('checks that all manager info is being returned', () => {
+test('checks that Manager is inheriting Employee, & returning all of its info', () => {
     const manager = new Manager('test', 9999, 'test@test.com', 1111);
 
-    expect(manager.getBasicInfo()).toMatchObject({
-        name: 'test',
-        employeeId: 9999,
-        email: 'test@test.com',
-    });
-    expect(manager.getOfficeNumber()).toEqual(1111);
+    expect(manager.getName()).toBe('test');
+    expect(manager.getId()).toBe(9999);
+    expect(manager.getEmail()).toBe('test@test.com');
+    expect(manager.getOfficeNumber()).toBe(1111);
+    expect(manager.getRole()).toBe('Manager');
 })

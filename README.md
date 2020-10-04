@@ -18,6 +18,9 @@ Teaming is a command line application that dynamically creates a roster for any 
 
 
 ## Installation
+Please note that this application requires [Node.js](https://nodejs.org/en/).
+<br>
+<br>
 In order to install this application, you'll need to clone this repository to your local machine. Once that is done, you will need to install the proper modules by running `npm install` in the cloned repository's root directory. After that, the application should be ready to use.
 
 

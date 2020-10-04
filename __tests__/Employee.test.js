@@ -8,10 +8,11 @@ test('creates an employee object', () => {
     expect(employee.email).toMatch('@');
 });
 
-test('checks that the basic info for an employee is being returned', () => {
+test('checks that all properties is being returned', () => {
     const employee = new Employee('test', 4, 'blank@blank.com');
 
-    expect(employee.getBasicInfo()).toHaveProperty('name');
-    expect(employee.getBasicInfo()).toHaveProperty('employeeId');
-    expect(employee.getBasicInfo()).toHaveProperty('email');
+    expect(employee.getName()).toBe('test');
+    expect(employee.getId()).toBe(4);
+    expect(employee.getEmail()).toBe('blank@blank.com');
+    expect(employee.getRole()).toBe('Employee');
 });

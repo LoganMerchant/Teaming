@@ -6,13 +6,12 @@ test('tests that a school is being returned', () => {
     expect(intern.school).toEqual('school');
 });
 
-test('tests that Intern is inheriting Employee', () => {
+test('tests that Intern is inheriting Employee, & returning its info', () => {
     const intern = new Intern('test', 9999, 'test@test.com', 'school');
 
-    expect(intern.getBasicInfo()).toMatchObject({ 
-        name: 'test', 
-        employeeId: 9999, 
-        email: 'test@test.com', 
-    });
-    expect(intern.getSchool()).toEqual('school');
+    expect(intern.getName()).toBe('test');
+    expect(intern.getId()).toBe(9999);
+    expect(intern.getEmail()).toBe('test@test.com');
+    expect(intern.getSchool()).toBe('school');
+    expect(intern.getRole()).toBe('Intern');
 });

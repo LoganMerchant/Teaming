@@ -25,7 +25,7 @@ In order to install this application, you'll need to clone this repository to yo
 
 
 ## Usage
-For a walkthrough video, click [here](https://drive.google.com/file/d/1XfJY_JbbDG3D_tiss0nwiLr3OCDYog3t/view?usp=sharing)
+For a walkthrough video, click [here](https://drive.google.com/file/d/1XfJY_JbbDG3D_tiss0nwiLr3OCDYog3t/view?usp=sharing).
 <br>
 <br>
 Once the application is installed, simply run `node index.js` in your command line, and answer the prompts. Once all relevent information about your team is input, i.e. their names, emails, employee ids, etcetera, the webpage will be printed in the `dis` directory.

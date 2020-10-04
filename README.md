@@ -13,7 +13,7 @@ Teaming is a command line application that dynamically creates a roster for any 
   * [Usage](#usage)
   * [Testing](#testing)
   * [How to Contribute](#how-to-contribute)
-  * [Licenses](#licenses)
+  * [Licenses](#licenses)3
   * [Questions](#questions)
 
 

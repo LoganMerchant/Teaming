@@ -20,7 +20,7 @@ const generateTeam = (managerArr, engineerArr, internArr) => {
         <main>
             <section id="managers" class="row p-1">
                 ${managerArr
-                    .forEach(({ name, employeeId, email, officeNumber }) => {
+                    .map(({ name, employeeId, email, officeNumber }) => {
                         return `
                             <div class="card bg-secondary col-12 col-md-6 col-lg-3">
                                 <div class="card-body">
@@ -49,7 +49,7 @@ const generateTeam = (managerArr, engineerArr, internArr) => {
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">Employee ID: ${employeeId}</li>
                                         <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
-                                        <li class="list-group-item">GitHub: <a href="https://github/${github}">${github}</a></li>
+                                        <li class="list-group-item">GitHub: <a href="https://github.com/${github}">${github}</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -85,4 +85,4 @@ const generateTeam = (managerArr, engineerArr, internArr) => {
     `
 };
 
-module.exports = generateTeam();
+module.exports = generateTeam;

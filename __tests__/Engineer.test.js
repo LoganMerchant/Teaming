@@ -3,7 +3,7 @@ const Engineer = require('../lib/Engineer.js');
 test('checks to see if engineer is returning a username', () => { 
     const engineer = new Engineer('test', 9999, 'test@test.com', 'testname'); 
     
-    expect(engineer.username).toBe('testname'); 
+    expect(engineer.github).toBe('testname'); 
 }); 
 
 test('checks to see if Engineer properly inherits Employee', () => { 

@@ -12,8 +12,77 @@ const generateTeam = (managerArr, engineerArr, internArr) => {
         crossorigin="anonymous">    
     </head>
     <body>
+
+        <header class="bg-success">
+            <h1 class="display-3 py-3 text-center">My Wonderful Team</h1>
+        </header>
+
+        <main>
+            <section id="managers" class="row p-1">
+                ${managerArr
+                    .forEach(({ name, employeeId, email, officeNumber }) => {
+                        return `
+                            <div class="card bg-secondary col-12 col-md-6 col-lg-3">
+                                <div class="card-body">
+                                    <h5 class="card-subtitle p-3 bg-primary">${name}</h5>
+                                    <h6 class="card-subtitle p-3 bg-primary">Manager</h6>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Employee ID: ${employeeId}</li>
+                                        <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
+                                        <li class="list-group-item">Office Number: ${officeNumber}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        `;
+                    })
+                }
+            </section>
+
+            <section id="engineers" class="row p-1">
+                ${engineerArr
+                    .forEach(({ name, employeeId, email, github }) => {
+                        return `
+                            <div class="card bg-secondary col-12 col-md-6 col-lg-3">
+                                <div class="card-body">
+                                    <h5 class="card-subtitle p-3 bg-primary">${name}</h5>
+                                    <h6 class="card-subtitle p-3 bg-primary">Engineer</h6>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Employee ID: ${employeeId}</li>
+                                        <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
+                                        <li class="list-group-item">GitHub: <a href="https://github/${github}">${github}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        `;
+                    })
+                }
+            </section>
+
+            <section id="managers" class="row p-1">
+                ${internArr
+                    .forEach(({ name, employeeId, email, school }) => {
+                        return `
+                            <div class="card bg-secondary col-12 col-md-6 col-lg-3">
+                                <div class="card-body">
+                                    <h5 class="card-subtitle p-3 bg-primary">${name}</h5>
+                                    <h6 class="card-subtitle p-3 bg-primary">Intern</h6>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Employee ID: ${employeeId}</li>
+                                        <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
+                                        <li class="list-group-item">School: ${school}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        `;
+                    })
+                }
+            </section>
+
+        </main>
         
     </body>
     </html> 
     `
 };
+
+module.exports = generateTeam();
